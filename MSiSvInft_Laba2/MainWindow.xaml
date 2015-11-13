@@ -1,22 +1,24 @@
 ﻿<Window x:Name="WMain" x:Class="MSiSvInft_Laba2.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Width="525" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FF404040" 
-        WindowStyle="None" SizeToContent="Height">
+        Title="MainWindow" Width="1007.5" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" SizeToContent="Height" Height="750">
+    <Window.Background>
+        <ImageBrush ImageSource="3473.jpg"/>
+    </Window.Background>
     <Grid x:Name="GMain">
         <Grid.RowDefinitions>
-            <RowDefinition Height="8*"/>
-            <RowDefinition Height="92*"/>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="221*"/>
         </Grid.RowDefinitions>
-        <Label x:Name="LTitle" Grid.Row="0" Content="MSiSvInfT__Laba1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="15"/>
-        <Label x:Name="BClose" Grid.Row="0" Content="X" Width="20" HorizontalAlignment="Right" VerticalAlignment="Stretch" FontSize="18" MouseLeftButtonUp="CloseApp_Click"/>
-        <Label x:Name="LFilePath" Grid.Row="1" Content="File path:" FontSize="18"/>
-        <TextBox x:Name="TbFilePath" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="20" Background="#FF707070" Margin="80,10,80,0" CaretBrush="Black"/>
-        <Button x:Name="BOpen" Grid.Row="1" Content ="Open..." HorizontalAlignment="Right" VerticalAlignment="Top" Height="20" Width="60" Background="#FF707070" Margin="0,10,10,0" Click="OpenFile_Click"/>
-        <TextBox x:Name="TbFileText" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="365" Width="500" Background="#FF707070" Margin="12,40,13,0" VerticalScrollBarVisibility="Auto" CaretBrush="Black" AcceptsReturn="True" AcceptsTab="True"/>
-        <Label x:Name="LResult" Grid.Row="1" Content="Result:" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="18" Margin="0,405,0,0"/>
-        <Button x:Name="BAnalize" Grid.Row="1" Content="Analize" HorizontalAlignment="Right" VerticalAlignment="Top" Width="100" Height="20" Margin="0,410,10,0" Background="#FF707070" Click="Analize_Click"/>
-        <TextBox x:Name="TbResult" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="250" Width="500" Background="#FF707070" Margin="12,435,13,10" IsReadOnly="True" VerticalScrollBarVisibility="Auto" CaretBrush="Black"/>
-
+        <Label x:Name="LTitle" Grid.Row="0" Content="ADA   LANGUAGE" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" FontSize="70" FontFamily="/MSiSvInft_Laba2;component/#Necropsy" Foreground="Red" FontWeight="Bold" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Animated"/>
+        <Label x:Name="BClose" Grid.Row="0" Content="X" Width="41" HorizontalAlignment="Right" VerticalAlignment="Stretch" FontSize="80" MouseLeftButtonUp="CloseApp_Click" FontFamily="/MSiSvInft_Laba2;component/#1313 MockingbiRd Lane" Foreground="Red"/>
+        <Label x:Name="LFilePath" Grid.Row="1" Content="File path:" FontSize="28" Foreground="Red" FontFamily="/MSiSvInft_Laba2;component/#1313 MockingbiRd Lane" Margin="0,10,910,613"/>
+        <TextBox x:Name="TbFilePath" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="40" Background="#4CFFDC00" Margin="80,10,80,0" CaretBrush="Black" Foreground="Red" FontSize="30" FontFamily="/MSiSvInft_Laba2;component/#1313 MockingbiRd Lane"/>
+        <Button x:Name="BOpen" Grid.Row="1" Content ="Open..." HorizontalAlignment="Right" VerticalAlignment="Top" Height="40" Width="60" Background="#99FFDC00" Margin="0,10,10,0" Click="OpenFile_Click" Foreground="Red" FontFamily="/MSiSvInft_Laba2;component/#1313 MockingbiRd Lane" FontSize="28"/>
+        <TextBox x:Name="TbFileText" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="584" Width="520" Background="#33FFDC00" Margin="10,55,478,0" VerticalScrollBarVisibility="Hidden" CaretBrush="Red" AcceptsReturn="True" AcceptsTab="True" BorderBrush="Transparent" Foreground="Yellow" TextWrapping="Wrap" TextOptions.TextFormattingMode="Display" FontFamily="Adobe Gothic Std B" Padding="5"/>
+        <Button x:Name="BAnalize" Grid.Row="1" Content="DO HOT" HorizontalAlignment="Right" VerticalAlignment="Top" Width="138" Height="80" Margin="0,297,321,0" Background="#99E1DC00" Click="Analize_Click" FontFamily="/MSiSvInft_Laba2;component/#Necropsy" Foreground="Red" FontSize="35"/>
+        <TextBox x:Name="TbResult" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="584" Width="287" Background="#33FFDC00" Margin="711,55,10,0" IsReadOnly="True" VerticalScrollBarVisibility="Hidden" CaretBrush="Black" BorderBrush="Transparent" Foreground="Yellow" TextWrapping="Wrap" TextOptions.TextFormattingMode="Display" FontFamily="Adobe Gothic Std B"/>
+        
     </Grid>
 </Window>

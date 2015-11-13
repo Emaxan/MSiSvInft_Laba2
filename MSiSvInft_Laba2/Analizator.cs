@@ -49,6 +49,7 @@ namespace MSiSvInft_Laba2
                 for (var i = 0; i < temp.Count(); i++)
                     names.Add(temp[i].Trim());
             }
+            if (names.Count < 1) return "Nothing";
 
             var nameArr = names.ToArray();
 
@@ -83,10 +84,7 @@ namespace MSiSvInft_Laba2
         }
 
         private static void CountSpen(ref Function func, ref string text)
-        {//BUG DECLARE!!!!
-
-
-
+        {
             var declare = new Regex(@"(\bdeclare)((.|\n)+)(begin)((.|\n)+)(end;)").Matches(text, func.NamePos);
             foreach (Match declar in declare)
             {
@@ -239,16 +237,31 @@ namespace MSiSvInft_Laba2
             foreach (Match match in locals)
                 if (match.Value.IndexOf(',') > 0)
                     foreach (var local in match.Value.Substring(0, match.Value.Length - ": ".Length).Split(','))
-                        yield return new Local {Name = local.Trim(), Count = 0, LocalType = LocalType.GeneralType};
+                        yield return new Local
+                        {
+                            Name = local.Trim(), 
+                            Count = 0, 
+                            LocalType = LocalType.GeneralType
+                        };
                 else
-                    yield return new Local {Name = match.Value.Substring(0, match.Value.Length - ": ".Length).Trim(), Count = 0, LocalType = LocalType.GeneralType};
+                    yield return new Local
+                    {
+                        Name = match.Value.Substring(0, match.Value.Length - ": ".Length).Trim(), 
+                        Count = 0, 
+                        LocalType = LocalType.GeneralType
+                    };
             locals = new Regex(@"\bfor\s+[^\s]+\s+in\b").Matches(text);
             foreach (Match match in locals)
             {
                 var space = match.Value.IndexOf(' ') + 1;
                 var lastSpace = space;                   
                 while (match.Value[lastSpace] != ' ') lastSpace++;
-                yield return new Local {Name = match.Value.Substring(space, lastSpace - space).Trim(), Count = 0, LocalType = LocalType.ForParametr};
+                yield return new Local
+                {
+                    Name = match.Value.Substring(space, lastSpace - space).Trim(), 
+                    Count = 0, 
+                    LocalType = LocalType.ForParametr
+                };
             }
         }
     }
